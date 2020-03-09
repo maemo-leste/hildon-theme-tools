@@ -1,0 +1,96 @@
+hildon-theme-tools (0.6.2-1+0m5) unstable; urgency=low
+
+  * This entry has been added by BIFH queue processor
+    Suffix +0m5 added to package revision
+
+ -- Kojo Aapo <aapo.kojo@nokia.com>  Thu, 11 Jun 2009 13:24:51 +0300
+
+hildon-theme-tools (0.6.2-1) unstable; urgency=low
+
+  * Fixed a crasher.
+  * New dithering algorithm.
+
+ -- Daniel Borgmann <danielb@openismus.com>  Mon, 08 Jun 2009 14:09:00 +0200
+
+hildon-theme-tools (0.6.1-1) unstable; urgency=low
+
+  * Fixed a memory leak.
+
+ -- Daniel Borgmann <danielb@openismus.com>  Fri, 29 May 2009 18:00:00 +0200
+
+hildon-theme-tools (0.6.0-1) unstable; urgency=low
+
+  * Add dither tool and integrate dithering with slicer tool.
+  * Increase compression level for generated PNGs.
+  * Updated bootstrap to support Fremantle themes (with SVN access).
+  * Add an option to the outliner to generate borders from Gtk RC files.
+
+ -- Daniel Borgmann <danielb@openismus.com>  Tue, 26 May 2009 14:40:00 +0200
+
+hildon-theme-tools (0.5.2-1) unstable; urgency=low
+
+  * Updated repo addresses for bootstrap tool
+  * Mention the CC license instead of the GPL license
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Thu, 16 Aug 2007 15:08:04 +0300
+
+hildon-theme-tools (0.5.1-1) unstable; urgency=low
+
+  * Fixing the memory allocation problem 
+  * Updated repo addresses for bootstrap tool
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Tue, 19 Jun 2007 12:13:51 +0300
+
+hildon-theme-tools (0.5.0-1) unstable; urgency=low
+
+  * Removing the 'separate_alpha' keyword
+  * Adding the 'noalpha' keyword
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Wed, 09 May 2007 15:57:06 +0300
+
+hildon-theme-tools (0.4.0-1) unstable; urgency=low
+
+  * Slicer supports now 'separate_alpha' keyword.
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Mon, 07 May 2007 11:10:26 +0300
+
+hildon-theme-tools (0.3.0-1) unstable; urgency=low
+
+  * Fixing a tiny dep problem in debian package
+  * New tool: hildon-theme-bootstrap
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Thu, 22 Feb 2007 10:50:59 +0200
+
+hildon-theme-tools (0.2.1-1) unstable; urgency=low
+
+  * Outliner tool now outlines colors as well. 
+  * Fixing prg name brokeness.
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Fri, 08 December 2006 15:00:06 +0300
+
+hildon-theme-tools (0.2.0-2) unstable; urgency=low
+
+  * Fixing a dependancy problem.
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Tue, 05 December 2006 10:00:06 +0300
+
+hildon-theme-tools (0.2.0-1) unstable; urgency=low
+
+  * Second official release.
+  * Adding a lot of new tools. 
+  * Fixing the build system.
+  * Should work as expected now.
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Mon, 04 December 2006 15:00:06 +0300
+
+hildon-theme-tools (0.1.0-1) unstable; urgency=low
+
+  * First official release.
+
+ -- Michael Dominic Kostrzewa <michael.kostrzewa@nokia.com>  Fri, 20 October 2006 14:55:06 +0300
+
+hildon-theme-tools (0.0-unreleased1) unstable; urgency=low
+
+  * Copied from osso-themes-config 2.0.6-1, and modified a bit.
+
+ -- Marius Vollmer <marius.vollmer@nokia.com>  Wed, 20 Sep 2006 13:24:56 +0300
