@@ -29,8 +29,8 @@ Template*                       read_template (gchar *template_file)
         Template *templ = g_new0 (Template, 1);
         gchar **element_keys = NULL;
         gchar **color_keys = NULL;
-        guint element_count = 0;
-        guint color_count = 0;
+        gsize element_count = 0;
+        gsize color_count = 0;
         int i;
 
         g_return_val_if_fail (templ != NULL, NULL);
@@ -174,7 +174,7 @@ void                            free_template (Template *templ)
 Element*                        new_element_from_key (GKeyFile *key_file, gchar *name)
 {
         Element *element = NULL;
-        guint size = 0;
+        gsize size = 0;
         gchar **vals = NULL;
         
         g_return_val_if_fail (key_file != NULL, NULL);
@@ -222,7 +222,7 @@ Done:
 Color*                          new_color_from_key (GKeyFile *key_file, gchar *name)
 {
         Color *color = NULL;
-        guint size = 0;
+        gsize size = 0;
         gint *vals = NULL;
         
         g_return_val_if_fail (key_file != NULL, NULL);
