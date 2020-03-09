@@ -21,6 +21,7 @@
 
 #include <glib.h>
 #include <math.h>
+#include <stdlib.h>
 #include <string.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
