@@ -1,7 +1,7 @@
 Source: hildon-theme-tools
 Section: x11
 Priority: optional
-Maintainer: Michael Dominic Kostrzewa  <michael.kostrzewa@nokia.com>
+Maintainer: Merlijn Wajer <merlijn@wizzup.org>
 Build-Depends: debhelper (>= 4.0.0), pkg-config, libgtk2.0-dev (>= 1:2.6.0)
 Standards-Version: 3.6.0
 
