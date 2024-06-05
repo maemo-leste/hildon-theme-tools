@@ -42,6 +42,7 @@ struct                          _Element
         gint Y;
         gint Width;
         gint Height;
+        gint XBorder;
         gint BorderTop;
         gint BorderBottom;
         gint BorderLeft;

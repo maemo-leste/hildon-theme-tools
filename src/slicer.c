@@ -1,4 +1,4 @@
-/* 
+/*
  * GPL license, Copyright (c) 2006 by Nokia Corporation                       
  *                                                                            
  * Authors:                                                                   
@@ -160,6 +160,20 @@ void                            process (Template *templ, GdkPixbuf *pixbuf, gch
                         GdkPixbuf *sub = gdk_pixbuf_new_subpixbuf (pixbuf, 
                                                                    element->X, element->Y, 
                                                                    element->Width, element->Height);
+
+                        if (element->XBorder) {
+                            gint xb = element->XBorder;
+                            GdkPixbuf *sub1 =  gdk_pixbuf_new (gdk_pixbuf_get_colorspace (sub),
+                                                               gdk_pixbuf_get_has_alpha (sub),
+                                                               gdk_pixbuf_get_bits_per_sample (sub),
+                                                               2 * xb, element->Height);
+
+                            gdk_pixbuf_copy_area (sub, 0, 0, xb, element->Height, sub1, 0, 0);
+                            gdk_pixbuf_copy_area (sub, element->Width - xb, 0, xb, element->Height,
+                                                  sub1, xb, 0);
+                            g_object_unref (sub);
+                            sub = sub1;
+                        }
 
                         if (sub == NULL)
                                 g_printerr ("WARNING: Failed to process '%s'!\n", element->Name);

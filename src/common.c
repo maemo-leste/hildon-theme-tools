@@ -194,7 +194,16 @@ Element*                        new_element_from_key (GKeyFile *key_file, gchar 
         element = g_new0 (Element, 1);
         element->X = atoi (vals [0]);
         element->Y = atoi (vals [1]);
-        element->Width = atoi (vals [2]);
+
+        if (g_strstr_len (vals [2], -1, ";")) {
+            gchar **s = g_strsplit (vals [2], ";", 0);
+            element->Width = atoi (s [0]);
+            element->XBorder = atoi (s [1]);
+            g_strfreev (s);
+        } else {
+            element->Width = atoi (vals [2]);
+        }
+
         element->Height = atoi (vals [3]);
         element->Name = g_strdup (name);
 
