@@ -105,9 +105,11 @@ int                             main (int argc, char **argv)
         int return_val = 0;
         Template *template = NULL;
         GdkPixbuf *output_image = NULL;
+        char * progname = NULL;
 
-	g_type_init ();
-        g_set_prgname (g_basename (argv [0]));
+        progname = g_path_get_basename (argv [0]);
+        g_set_prgname (progname);
+
  
         /* Check the args... */
         if (argc < 3) {

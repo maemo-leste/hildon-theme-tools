@@ -300,10 +300,11 @@ int                             main (int argc, char **argv)
         Template *template = NULL;
         GdkPixbuf *output_image = NULL;
         GScanner *scanner = NULL;
+        char * progname = NULL;
 
+        progname = g_path_get_basename (argv [0]);
+        g_set_prgname (progname);
 
-	g_type_init ();
-        g_set_prgname (g_basename (argv [0]));
 
         /* Check the args... */
         if (argc < 3) {

@@ -36,9 +36,10 @@ int                             main (int argc, char **argv)
         gchar *output_file = NULL;
         GdkPixbuf *pixbuf = NULL;
         GError *error = 0;
+        char * progname = NULL;
 
-        g_type_init ();
-        g_set_prgname (g_basename (argv [0]));
+        progname = g_path_get_basename (argv [0]);
+        g_set_prgname (progname);
 
         if (argc < 2) {
                 show_usage ();
