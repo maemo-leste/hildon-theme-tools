@@ -351,11 +351,11 @@ int                             main (int argc, char **argv)
                 
                 g_print ("\n\n** Using directory '%s' for rc files.\n\n", rc_directory);
                 
-                gchar *rc_file = NULL;
+                const gchar *rc_file = NULL;
                 GDir *rc_dir = g_dir_open (rc_directory, 0, NULL);
                 
                 scanner = g_scanner_new (NULL);
-                while (rc_file = g_dir_read_name (rc_dir)) {
+                while ((rc_file = g_dir_read_name (rc_dir))) {
                         parse_rc (g_build_filename (rc_directory, rc_file, NULL), template, scanner);
                 }
                 g_scanner_destroy (scanner);
