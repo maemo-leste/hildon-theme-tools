@@ -1,3 +1,9 @@
+hildon-theme-tools (0.7.2) unstable; urgency=low
+
+  * slicer: support pixbuf horizontal crop to borders
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Tue, 11 Nov 2025 18:01:03 +0100
+
 hildon-theme-tools (0.7.1) unstable; urgency=low
 
   * slicer: support pixbuf horizontal crop to borders
