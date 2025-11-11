@@ -152,7 +152,7 @@ Done:
                 free_template (template);
 
         if (image != NULL)
-                gdk_pixbuf_unref (image);
+                g_object_unref(image);
 
         g_print ("\n");
         return return_val;

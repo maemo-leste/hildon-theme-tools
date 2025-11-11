@@ -69,7 +69,7 @@ GdkPixbuf*                      process (Template *templ, gchar *directory)
                         gdk_pixbuf_copy_area (image, 0, 0, element->Width, element->Height, 
                                               composite_image, element->X, element->Y);
                         g_print ("Processed %s\n", element->Name);
-                        gdk_pixbuf_unref (image);
+                        g_object_unref (image);
                 }
 
                 if (fname != NULL)
@@ -168,7 +168,7 @@ Done:
                 free_template (template);
 
         if (output_image != NULL)
-                gdk_pixbuf_unref (output_image);
+                g_object_unref (output_image);
 
         g_print ("\n");
         return return_val;

@@ -88,7 +88,7 @@ GdkPixbuf*                      process (Template *templ)
                                 gdk_pixbuf_fill (border_img, 0x000000ff);
                                 gdk_pixbuf_composite (border_img, image, 0, 0, element->Width, element->BorderTop, 
                                       0, 0, 1.0, 1.0, GDK_INTERP_NEAREST, 32);
-                                gdk_pixbuf_unref (border_img);
+                                g_object_unref (border_img);
                                 
                                 gdk_pixbuf_copy_area (h_border_img, 0, 0, element->Width, 1, 
                                                       image, 0, element->BorderTop - 1);
@@ -99,7 +99,7 @@ GdkPixbuf*                      process (Template *templ)
                                 gdk_pixbuf_fill (border_img, 0x000000ff);
                                 gdk_pixbuf_composite (border_img, image, 0, element->Height - element->BorderBottom, element->Width, element->BorderBottom, 
                                       0, 0, 1.0, 1.0, GDK_INTERP_NEAREST, 32);
-                                gdk_pixbuf_unref (border_img);
+                                g_object_unref (border_img);
                                 
                                 gdk_pixbuf_copy_area (h_border_img, 0, 0, element->Width, 1, 
                                                       image, 0, element->Height - element->BorderBottom);
@@ -110,7 +110,7 @@ GdkPixbuf*                      process (Template *templ)
                                 gdk_pixbuf_fill (border_img, 0x000000ff);
                                 gdk_pixbuf_composite (border_img, image, 0, 0, element->BorderLeft, element->Height, 
                                       0, 0, 1.0, 1.0, GDK_INTERP_NEAREST, 32);
-                                gdk_pixbuf_unref (border_img);
+                                g_object_unref (border_img);
                                 
                                 gdk_pixbuf_copy_area (v_border_img, 0, 0, 1, element->Height, 
                                                       image, element->BorderLeft - 1, 0);      
@@ -121,14 +121,14 @@ GdkPixbuf*                      process (Template *templ)
                                 gdk_pixbuf_fill (border_img, 0x000000ff);
                                 gdk_pixbuf_composite (border_img, image, element->Width - element->BorderRight, 0, element->BorderRight, element->Height, 
                                       0, 0, 1.0, 1.0, GDK_INTERP_NEAREST, 32);
-                                gdk_pixbuf_unref (border_img); 
+                                g_object_unref (border_img);
                                 
                                 gdk_pixbuf_copy_area (v_border_img, 0, 0, 1, element->Height, 
                                                       image, element->Width - element->BorderRight, 0);     
                         }
                         
-                        gdk_pixbuf_unref (h_border_img);
-                        gdk_pixbuf_unref (v_border_img);
+                        g_object_unref (h_border_img);
+                        g_object_unref (v_border_img);
                 }
 
                 if (image != NULL) {
@@ -137,7 +137,7 @@ GdkPixbuf*                      process (Template *templ)
                                               composite_image, element->X, element->Y);
                         //g_print ("Outlined %s\n", element->Name);
                         
-                        gdk_pixbuf_unref (image);
+                        g_object_unref (image);
                 }
 
                 counter++;
@@ -176,7 +176,7 @@ GdkPixbuf*                      process (Template *templ)
                                               composite_image, color->X - 4, color->Y - 4);
                         //g_print ("Outlined color %s\n", color->Name);
                         
-                        gdk_pixbuf_unref (image);
+                        g_object_unref (image);
                 }
 
                 counter++;
@@ -387,7 +387,7 @@ Done:
                 free_template (template);
 
         if (output_image != NULL)
-                gdk_pixbuf_unref (output_image);
+                g_object_unref (output_image);
 
         g_print ("\n");
         return return_val;

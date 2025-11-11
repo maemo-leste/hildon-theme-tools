@@ -189,14 +189,14 @@ void                            process (Template *templ, GdkPixbuf *pixbuf, gch
                                     element->NoAlpha == TRUE) {
                                         GdkPixbuf *oldy = sub;
                                         sub = strip_alpha_from_pixbuf (oldy);
-                                        gdk_pixbuf_unref (oldy);
+                                        g_object_unref(oldy);
                                 }*/
                                 
                                 save_pixbuf (sub, fname, TRUE);
 
                                 g_free (fname);
 
-                                gdk_pixbuf_unref (sub);
+                                g_object_unref(sub);
                                 g_print ("Processed %s\n", element->Name);
                         }
                 }
@@ -306,7 +306,7 @@ Done:
                 free_template (template);
 
         if (image != NULL)
-                gdk_pixbuf_unref (image);
+                g_object_unref(image);
 
         g_print ("\n");
         return return_val;
