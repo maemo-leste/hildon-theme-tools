@@ -45,6 +45,11 @@ gboolean                        check_if_pixbuf_needs_alpha (GdkPixbuf *pixbuf)
         return FALSE;
 }
 
+static void pixbuf_g_free(guchar* pixels, gpointer data) {
+    (void)data;
+    g_free(pixels);
+}
+
 /* Create a pixbuf copy with just the alpha channel */
 GdkPixbuf*                      extract_alpha_from_pixbuf (GdkPixbuf *pixbuf)
 {
@@ -82,7 +87,7 @@ GdkPixbuf*                      extract_alpha_from_pixbuf (GdkPixbuf *pixbuf)
                                         width, 
                                         height,
                                         width * 4, 
-                                        g_free,
+                                        pixbuf_g_free,
                                         (gpointer) new_pixels);
 
         return new;
@@ -129,7 +134,7 @@ GdkPixbuf*                      strip_alpha_from_pixbuf (GdkPixbuf *pixbuf)
                                         width, 
                                         height,
                                         width * 3, 
-                                        g_free,
+                                        pixbuf_g_free,
                                         (gpointer) new_pixels);
 
         return new;
